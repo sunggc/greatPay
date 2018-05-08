@@ -45,14 +45,5 @@ endpoints:
     enabled: true
   shutdown:
     enabled: false
-elaticjob:
-  zookeeper:
-    server-lists: 123.206.50.50:2181
-    namespace: my-project  
-
-jobEventConfig:
-  url: jdbc:h2:mem:job_event_storage
-  driverClassName: org.h2.Driver
-  username: sa
-  password:      
+    
    
