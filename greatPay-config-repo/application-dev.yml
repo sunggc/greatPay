@@ -45,4 +45,8 @@ endpoints:
     enabled: true
   shutdown:
     enabled: false
+elaticjob:
+  zookeeper:
+    server-lists: 123.206.50.50:2181
+    namespace: my-project    
    
