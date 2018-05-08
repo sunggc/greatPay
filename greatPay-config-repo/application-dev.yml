@@ -7,7 +7,7 @@ spring:
   redis:
     remote: true        #是否是cachecloud 获取
     host: 123.206.50.50
-    port: 6381
+    port: 6379
     password:
   rabbitmq:
     host: 123.206.50.50
