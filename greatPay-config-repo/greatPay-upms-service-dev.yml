@@ -1,3 +1,5 @@
+server:
+  port: 4050
 spring:
   datasource:   
     type: com.alibaba.druid.pool.DruidDataSource
@@ -46,5 +48,3 @@ druid:
  # host: http://p0hpm86wj.bkt.clouddn.com/
 #fdfs:
 #  file-host: 123.206.50.50    
-logging:
-  config: classpath:logback.xml
