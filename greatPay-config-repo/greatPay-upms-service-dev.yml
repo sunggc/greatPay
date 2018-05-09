@@ -1,29 +1,45 @@
 spring:
   datasource:   
-    type: com.zaxxer.hikari.HikariDataSource
+    type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://123.206.50.50:3306/greatPay?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: test
     password: test
-    initialize: false    
-mybatis-plus:
-  mapper-locations: classpath:/mapper/*Mapper.xml
-  typeAliasesPackage: com.ch.greatPay.admin.entity
-  global-config:
-    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
-    id-type: 0
-    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
-    field-strategy: 1
-    #驼峰下划线转换
-    db-column-underline: true
-    #刷新mapper 调试神器
-    refresh-mapper: true
-    #数据库大写下划线转换
-    #capital-mode: true
+    initialize: false
+mybatis:
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  typeAliasesPackage: com.ch.greatPay.*.entity
+#  global-config:
+#    id-type: 3
+#    field-strategy: 2
+#    auto-set-db-type: true
+#    db-column-underline: true
+#    refresh-mapper: true
   configuration:
     map-underscore-to-camel-case: true
-    cache-enabled: true
-
+    cache-enabled: false        
+#mybatis-plus:
+ # mapper-locations: classpath:/mapper/*Mapper.xml
+ # typeAliasesPackage: com.ch.greatPay.admin.entity
+#  global-config:
+    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+#    id-type: 0
+    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+#    field-strategy: 1
+    #驼峰下划线转换
+ #   db-column-underline: true
+    #刷新mapper 调试神器
+ #   refresh-mapper: true
+    #数据库大写下划线转换
+    #capital-mode: true
+#  configuration:
+ #   map-underscore-to-camel-case: true
+ #   cache-enabled: true
+druid:
+  pool:
+    initialSize: 10
+    maxActive: 100
+    minIdle: 10
 qiniu:
   accessKey: hM2cBDEM0FTYzpXbigRW90kV12NhhzhFM3jCzurJ
   secretKey: ENC(HM/K0KmtFoZSBhGDEA0Ez71ePTncZlQ954DfLNMZuOftKZq+2WR+dCXH9QEsf768q9wwd92RXLE=)
