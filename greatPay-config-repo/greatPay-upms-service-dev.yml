@@ -1,3 +1,4 @@
+spring:
   datasource:   
     type: com.zaxxer.hikari.HikariDataSource
     driverClassName: com.mysql.jdbc.Driver
