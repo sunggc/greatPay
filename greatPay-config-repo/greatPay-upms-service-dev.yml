@@ -32,9 +32,6 @@ druid:
  # host: http://p0hpm86wj.bkt.clouddn.com/
 #fdfs:
 #  file-host: 123.206.50.50    
-fdfs:
-  connect-timeout: 2000
-  so-timeout: 3000
-  file-host: 123.206.50.50
-  tracker-list:
-    - 10.1.5.85:22122
+fdfs: 
+  file-host: 123.206.50.50:22122
+  
