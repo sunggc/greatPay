@@ -34,5 +34,5 @@ druid:
 #  file-host: 123.206.50.50    
 fdfs: 
   file-host: 123.206.50.50:22122
-  tracker-list: 123.206.50.50:22122
+  tracker-list: 123.206.50.50:23000
   
