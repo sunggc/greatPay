@@ -20,23 +20,7 @@ mybatis:
   configuration:
     map-underscore-to-camel-case: true
     cache-enabled: false        
-#mybatis-plus:
- # mapper-locations: classpath:/mapper/*Mapper.xml
- # typeAliasesPackage: com.ch.greatPay.admin.entity
-#  global-config:
-    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
-#    id-type: 0
-    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
-#    field-strategy: 1
-    #驼峰下划线转换
- #   db-column-underline: true
-    #刷新mapper 调试神器
- #   refresh-mapper: true
-    #数据库大写下划线转换
-    #capital-mode: true
-#  configuration:
- #   map-underscore-to-camel-case: true
- #   cache-enabled: true
+
 druid:
   pool:
     initialSize: 10
@@ -48,3 +32,9 @@ druid:
  # host: http://p0hpm86wj.bkt.clouddn.com/
 #fdfs:
 #  file-host: 123.206.50.50    
+fdfs:
+  connect-timeout: 2000
+  so-timeout: 3000
+  file-host: 123.206.50.50
+  tracker-list:
+    - 10.1.5.85:22122
