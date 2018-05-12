@@ -32,7 +32,7 @@ zuul:
       serviceId: greatPay-auth-service
       stripPrefix: true
       sensitiveHeaders:
-    pig-admin-service:
+    greatPay-admin-service:
       path: /admin/**
       serviceId: greatPay-admin-service
       stripPrefix: true
