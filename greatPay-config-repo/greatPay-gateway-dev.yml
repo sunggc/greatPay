@@ -43,7 +43,7 @@ zuul:
     repository: REDIS 
     behind-proxy: true
     policies:
-      pig-admin-service:
+      greatPay-admin-service:
         limit: 100
         quota: 100
         refresh-interval: 3
