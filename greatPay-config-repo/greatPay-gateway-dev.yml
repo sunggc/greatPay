@@ -1,0 +1,74 @@
+server:
+  port: 9999
+
+spring:
+  rabbitmq:
+    host: 123.206.50.50
+    username: root
+    password: kshop
+  # zipkin:
+  #     base-url: http://localhost:5002
+  # sleuth:
+  #   enabled: true
+  #   sampler:
+  #     perce  ntage: 1
+    
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 30000
+    socket-timeout-millis: 30000
+  routes:
+    auth-service:
+      path: /auth/**
+      serviceId: greatPay-auth-service
+      stripPrefix: true
+      sensitiveHeaders:
+    pig-admin-service:
+      path: /admin/**
+      serviceId: greatPay-admin-service
+      stripPrefix: true
+      sensitiveHeaders:
+  ratelimit:
+    key-prefix: greatPay-ratelimite 
+    enabled: true 
+    repository: REDIS 
+    behind-proxy: true
+    policies:
+      pig-admin-service:
+        limit: 100
+        quota: 100
+        refresh-interval: 3
+
+security:
+  validate:
+    code: false
+  sessions: stateless
+  oauth2:
+    resource:
+      loadBalanced: true
+      user-info-uri: http://localhost/user
+      prefer-token-info: false
+      service-id: greatPay-gateway
+
+filter:
+  urls:
+    anon:
+      - /auth/**
+      - /admin/code/*
+      - /swagger-resources/**
+      - /swagger-ui.html
+      - /*/v2/api-docs
+      - /swagger/api-docs
+      - /webjars/**
+       
+logging:
+  config: classpath:logback.xml
