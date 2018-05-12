@@ -29,7 +29,7 @@ zuul:
   routes:
     auth-service:
       path: /auth/**
-      serviceId: greatPay-auth-service
+      serviceId: greatPay-auth
       stripPrefix: true
       sensitiveHeaders:
     greatPay-admin-service:
@@ -55,7 +55,7 @@ security:
   oauth2:
     resource:
       loadBalanced: true
-      user-info-uri: http://localhost/user
+      user-info-uri: http://localhost:4050/user
       prefer-token-info: false
       service-id: greatPay-gateway
 
