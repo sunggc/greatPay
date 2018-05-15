@@ -47,22 +47,8 @@ zuul:
         limit: 100
         quota: 100
         refresh-interval: 3
+    sensitive-headers: Cookie,Set-Cookie
 
-security:
-  validate:
-    code: false
-  sessions: stateless
-  oauth2:
-    resource:
-      loadBalanced: true
-      user-info-uri: http://localhost:3000/user
-      prefer-token-info: false
-      service-id: greatPay-gateway
-    client:
-      access-token-uri: http://localhost:9999/auth/oauth/token
-      user-authorization-uri: http://localhost:9999/uaa/oauth/authorize
-      client-id: webapp 
-   
 filter:
   urls:
     anon:
