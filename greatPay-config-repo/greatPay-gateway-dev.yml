@@ -34,7 +34,7 @@ zuul:
       sensitiveHeaders:
     greatPay-admin-service:
       path: /admin/**
-      serviceId: greatPay-admin-service
+      serviceId: greatPay-upms-service
       stripPrefix: true
       sensitiveHeaders:
   ratelimit:
@@ -60,5 +60,5 @@ filter:
       - /swagger/api-docs
       - /webjars/**
        
-#logging:
-#  config: classpath:logback.xml
+logging:
+  config: classpath:logback.xml
