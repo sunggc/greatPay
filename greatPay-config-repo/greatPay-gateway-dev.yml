@@ -58,8 +58,8 @@ security:
       user-info-uri: http://localhost:4050/user
       prefer-token-info: false
       service-id: greatPay-gateway
-   basic:
-    enabled: false
+    basic:
+      enabled: false
 filter:
   urls:
     anon:
