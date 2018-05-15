@@ -60,5 +60,5 @@ filter:
       - /swagger/api-docs
       - /webjars/**
        
-logging:
-  config: classpath:logback.xml
+#logging:
+#  config: classpath:logback.xml
