@@ -7,5 +7,5 @@ greatPay:
     clientSecret: admin
     scope: server
 
-logging:
-  config: classpath:logback.xml
+#logging:
+#  config: classpath:logback.xml
