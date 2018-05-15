@@ -55,15 +55,14 @@ security:
   oauth2:
     resource:
       loadBalanced: true
-      user-info-uri: http://localhost:4050/user
+      user-info-uri: http://localhost:3000/user
       prefer-token-info: false
       service-id: greatPay-gateway
     client:
       access-token-uri: http://localhost:9999/auth/oauth/token
       user-authorization-uri: http://localhost:9999/uaa/oauth/authorize
-      client-id: webapp  
-    basic:
-      enabled: false
+      client-id: webapp 
+   
 filter:
   urls:
     anon:
