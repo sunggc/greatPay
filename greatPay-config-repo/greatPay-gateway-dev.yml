@@ -27,11 +27,11 @@ zuul:
     connect-timeout-millis: 30000
     socket-timeout-millis: 30000
   routes:
-    auth-service:
-      path: /auth/**
-      serviceId: greatPay-auth
-      stripPrefix: true
-      sensitiveHeaders:
+    #auth-service:
+      #path: /auth/**
+      #serviceId: greatPay-auth
+      #stripPrefix: true
+      #sensitiveHeaders:
     greatPay-admin-service:
       path: /admin/**
       serviceId: greatPay-upms-service
@@ -60,5 +60,5 @@ filter:
       - /swagger/api-docs
       - /webjars/**
        
-#logging:
-#  config: classpath:logback.xml
+logging:
+  config: classpath:logback.xml
