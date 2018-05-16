@@ -27,16 +27,16 @@ zuul:
     connect-timeout-millis: 30000
     socket-timeout-millis: 30000
   routes:
-    #auth-service:
-      #path: /auth/**
-      #serviceId: greatPay-auth
-      #stripPrefix: true
-      #sensitiveHeaders:
+    auth-service:
+      path: /auth/**
+      serviceId: greatPay-auth
+      stripPrefix: true
+      sensitiveHeaders: Cookie,Set-Cookie
     greatPay-admin-service:
       path: /admin/**
       serviceId: greatPay-upms-service
       stripPrefix: true
-      sensitiveHeaders:
+      sensitiveHeaders: Cookie,Set-Cookie
   ratelimit:
     key-prefix: greatPay-ratelimite 
     enabled: true 
@@ -47,18 +47,18 @@ zuul:
         limit: 100
         quota: 100
         refresh-interval: 3
-    sensitive-headers: Cookie,Set-Cookie
+    
 
-#filter:
-#  urls:
- #   anon:
-#      - /auth/**
-#      - /admin/code/*
-#      - /swagger-resources/**
-#      - /swagger-ui.html
-#      - /*/v2/api-docs
-#      - /swagger/api-docs
- #     - /webjars/**
+filter:
+  urls:
+    anon:
+      - /auth/**
+      - /admin/code/*
+      - /swagger-resources/**
+      - /swagger-ui.html
+      - /*/v2/api-docs
+      - /swagger/api-docs
+      - /webjars/**
        
 logging:
   config: classpath:logback.xml
