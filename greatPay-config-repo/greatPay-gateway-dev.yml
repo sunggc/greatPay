@@ -43,7 +43,7 @@ zuul:
     repository: REDIS 
     behind-proxy: true
     policies:
-      greatPay-admin-service:
+      greatPay-upms-service:
         limit: 100
         quota: 100
         refresh-interval: 3
