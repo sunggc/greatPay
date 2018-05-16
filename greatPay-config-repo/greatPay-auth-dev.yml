@@ -3,9 +3,9 @@ server:
 
 greatPay:
   auth:
-    clientId: admin
-    clientSecret: admin
+    clientId: ENC(Ho5VxMWMMIzfIEE8/WxVzA==)
+    clientSecret: ENC(Ho5VxMWMMIzfIEE8/WxVzA==)
     scope: server
 
-#logging:
-#  config: classpath:logback.xml
+logging:
+  config: classpath:logback.xml
