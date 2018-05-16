@@ -1,5 +1,8 @@
 server:
   port: 4050
+eureka:
+  instance:
+    status-page-url: http://localhost:${server.port}/swagger-ui.html  
 spring:
   datasource:   
     type: com.alibaba.druid.pool.DruidDataSource
