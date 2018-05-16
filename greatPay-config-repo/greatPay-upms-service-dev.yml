@@ -8,7 +8,7 @@ spring:
     username: test
     password: test
     initialize: false
-mybatis:
+mybatis-plus:
   mapper-locations: classpath*:/mapper/*Mapper.xml
   typeAliasesPackage: com.ch.greatPay.*.entity
 #  global-config:
