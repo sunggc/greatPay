@@ -10,7 +10,7 @@ spring:
     initialize: false
 mybatis-plus:
   mapper-locations: classpath*:/mapper/*Mapper.xml
-  typeAliasesPackage: com.ch.greatPay.*.entity
+  typeAliasesPackage: com.ch.greatPay.admin.model.entity
 #  global-config:
 #    id-type: 3
 #    field-strategy: 2
