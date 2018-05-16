@@ -31,12 +31,12 @@ zuul:
       path: /auth/**
       serviceId: greatPay-auth
       stripPrefix: true
-      sensitiveHeaders: Cookie,Set-Cookie
+      sensitiveHeaders:
     greatPay-admin-service:
       path: /admin/**
       serviceId: greatPay-upms-service
       stripPrefix: true
-      sensitiveHeaders: Cookie,Set-Cookie
+      sensitiveHeaders:
   ratelimit:
     key-prefix: greatPay-ratelimite 
     enabled: true 
