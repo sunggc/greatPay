@@ -49,16 +49,16 @@ zuul:
         refresh-interval: 3
     sensitive-headers: Cookie,Set-Cookie
 
-filter:
-  urls:
-    anon:
-      - /auth/**
-      - /admin/code/*
-      - /swagger-resources/**
-      - /swagger-ui.html
-      - /*/v2/api-docs
-      - /swagger/api-docs
-      - /webjars/**
+#filter:
+#  urls:
+ #   anon:
+#      - /auth/**
+#      - /admin/code/*
+#      - /swagger-resources/**
+#      - /swagger-ui.html
+#      - /*/v2/api-docs
+#      - /swagger/api-docs
+ #     - /webjars/**
        
 logging:
   config: classpath:logback.xml
